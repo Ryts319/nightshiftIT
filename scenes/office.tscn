@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bilq5teaxnig"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqxiu"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+size = Vector3(1.2, 0.4, 3.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
+size = Vector3(1.2, 0.4, 3.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1bvp3"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
+size = Vector3(10, 0.2, 10)
+
+[node name="Office" type="Node3D" unique_id=359356810]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1292048453]
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=719072532]
+mesh = SubResource("BoxMesh_ig7tw")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1562306739]
+visible = false
+shape = SubResource("BoxShape3D_dqxiu")
+metadata/_edit_lock_ = true
+
+[node name="-x office wall" type="StaticBody3D" parent="." unique_id=952250053]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5, 1.6, 0)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="-x office wall" unique_id=492119476]
+mesh = SubResource("BoxMesh_0xm2m")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-x office wall" unique_id=2019541513]
+visible = false
+shape = SubResource("BoxShape3D_h2yge")
+metadata/_edit_lock_ = true
+
+[node name="Entry wall" type="StaticBody3D" parent="." unique_id=1287582679]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -3.5, 0.5, -3)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Entry wall" unique_id=1833358041]
+mesh = SubResource("BoxMesh_h2yge")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entry wall" unique_id=274001750]
+visible = false
+shape = SubResource("BoxShape3D_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="+x office wall" type="StaticBody3D" parent="." unique_id=1785799694]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 5, 1.6, 0)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="+x office wall" unique_id=1663772482]
+mesh = SubResource("BoxMesh_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=856907287]
+visible = false
+shape = SubResource("BoxShape3D_lquwl")
+metadata/_edit_lock_ = true
+
+[node name="+z office wall" type="StaticBody3D" parent="." unique_id=131152736]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, 5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=594716226]
+mesh = SubResource("BoxMesh_7mycd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=227801847]
+visible = false
+shape = SubResource("BoxShape3D_272bh")
+metadata/_edit_lock_ = true
+
+[node name="-z office wall" type="StaticBody3D" parent="." unique_id=1044550622]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, -5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="-z office wall" unique_id=1856116952]
+mesh = SubResource("BoxMesh_5vw27")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=458833214]
+visible = false
+shape = SubResource("BoxShape3D_kek77")
+metadata/_edit_lock_ = true
+
+[node name="ceiling" type="StaticBody3D" parent="." unique_id=1489833898]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.1, 0)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ceiling" unique_id=171390657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00022053719, 0.0052936077, -0.00034832954)
+mesh = SubResource("BoxMesh_dqxiu")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=1117586130]
+visible = false
+shape = SubResource("BoxShape3D_g2xtj")
+metadata/_edit_lock_ = true
+
+[node name="ambientlight" type="OmniLight3D" parent="." unique_id=1479130593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07329917, 1.7889979, 0.093639374)
+light_color = Color(0.9254902, 0.96862745, 1, 1)
+light_energy = 0.315
+shadow_enabled = true
+omni_range = 7.547
+metadata/_edit_lock_ = true
+
+[node name="entrylight" type="SpotLight3D" parent="." unique_id=761255185]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -3.763767, 3.478934, -4.091496)
+shadow_enabled = true
+shadow_normal_bias = 0.0
+shadow_opacity = 0.35
+spot_angle = 25.17895

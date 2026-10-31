@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://yfamwq4f0l8b"]
+
+[ext_resource type="PackedScene" uid="uid://bilq5teaxnig" path="res://scenes/office.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c8t2acpftydll" path="res://scenes/player.tscn" id="2_sugp2"]
+
+[sub_resource type="Environment" id="Environment_dqxiu"]
+background_mode = 1
+background_color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.12225228, 0.12225222, 0.1222522, 1)
+ambient_light_energy = 1.46
+
+[node name="Main" type="Node3D" unique_id=2111868617]
+
+[node name="Office" parent="." unique_id=359356810 instance=ExtResource("1_0wfyh")]
+
+[node name="Player" parent="." unique_id=744092845 instance=ExtResource("2_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137376276]
+environment = SubResource("Environment_dqxiu")
