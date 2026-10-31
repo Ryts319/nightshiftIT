@@ -34,3 +34,48 @@ shape = SubResource("CapsuleShape3D_dqxiu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=273587252]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="-x office wall" type="StaticBody3D" parent="." unique_id=1228056842]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.0406065, 4.941186, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="-x office wall" unique_id=305215885]
+mesh = SubResource("BoxMesh_dqxiu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-x office wall" unique_id=1242780398]
+shape = SubResource("BoxShape3D_dqxiu")
+
+[node name="+x office wall" type="StaticBody3D" parent="." unique_id=932479934]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 4.9889307, 4.941186, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="+x office wall" unique_id=370911530]
+mesh = SubResource("BoxMesh_dqxiu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=1826504665]
+shape = SubResource("BoxShape3D_dqxiu")
+
+[node name="+z office wall" type="StaticBody3D" parent="." unique_id=920854628]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 4.941186, 4.984557)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=750238234]
+mesh = SubResource("BoxMesh_dqxiu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=426518913]
+shape = SubResource("BoxShape3D_dqxiu")
+
+[node name="-z office wall" type="StaticBody3D" parent="." unique_id=1871016589]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 4.941186, -5.025643)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="-z office wall" unique_id=30806714]
+mesh = SubResource("BoxMesh_dqxiu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=123324096]
+shape = SubResource("BoxShape3D_dqxiu")
+
+[node name="Floor6" type="StaticBody3D" parent="." unique_id=1118535340]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.016458988, 9.941253, 0.01022625)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor6" unique_id=1816838004]
+mesh = SubResource("BoxMesh_dqxiu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor6" unique_id=1935338930]
+shape = SubResource("BoxShape3D_dqxiu")
