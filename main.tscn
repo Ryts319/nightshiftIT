@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8dbo68ejkkpq" path="res://player.gd" id="1_ig7tw"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(10, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqxiu"]
@@ -12,14 +12,53 @@ size = Vector3(10, 0.2, 10)
 radius = 0.3
 height = 1.8
 
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1bvp3"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="Environment" id="Environment_dqxiu"]
+background_mode = 1
+background_color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.12225228, 0.12225222, 0.1222522, 1)
+ambient_light_energy = 1.46
+
 [node name="Main" type="Node3D" unique_id=2111868617]
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1161671574]
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=372753209]
-mesh = SubResource("BoxMesh_dqxiu")
+mesh = SubResource("BoxMesh_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1723520763]
+visible = false
 shape = SubResource("BoxShape3D_dqxiu")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1363853665]
@@ -32,51 +71,70 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1194071828]
 shape = SubResource("CapsuleShape3D_dqxiu")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=273587252]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
-shadow_opacity = 0.69
-
 [node name="-x office wall" type="StaticBody3D" parent="." unique_id=1228056842]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.0406065, 4.941186, 0)
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="-x office wall" unique_id=305215885]
-mesh = SubResource("BoxMesh_dqxiu")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3669581, 0, 0)
+mesh = SubResource("BoxMesh_0xm2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-x office wall" unique_id=1242780398]
-shape = SubResource("BoxShape3D_dqxiu")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3583777, 0, 0)
+visible = false
+shape = SubResource("BoxShape3D_h2yge")
 
 [node name="+x office wall" type="StaticBody3D" parent="." unique_id=932479934]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 4.9889307, 4.941186, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 4.9889307, 1.5765877, 0)
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="+x office wall" unique_id=370911530]
-mesh = SubResource("BoxMesh_dqxiu")
+mesh = SubResource("BoxMesh_1bvp3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=1826504665]
-shape = SubResource("BoxShape3D_dqxiu")
+visible = false
+shape = SubResource("BoxShape3D_lquwl")
 
 [node name="+z office wall" type="StaticBody3D" parent="." unique_id=920854628]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 4.941186, 4.984557)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 1.5741167, 4.984557)
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=750238234]
-mesh = SubResource("BoxMesh_dqxiu")
+mesh = SubResource("BoxMesh_7mycd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=426518913]
-shape = SubResource("BoxShape3D_dqxiu")
+visible = false
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="-z office wall" type="StaticBody3D" parent="." unique_id=1871016589]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 4.941186, -5.025643)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.016458988, 1.572386, -5.025643)
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="-z office wall" unique_id=30806714]
-mesh = SubResource("BoxMesh_dqxiu")
+mesh = SubResource("BoxMesh_5vw27")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=123324096]
-shape = SubResource("BoxShape3D_dqxiu")
+visible = false
+shape = SubResource("BoxShape3D_kek77")
 
 [node name="ceiling" type="StaticBody3D" parent="." unique_id=1118535340]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.016458988, 9.921029, 0.01022625)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.016458988, 3.1653104, 0.01022625)
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ceiling" unique_id=1816838004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00022053719, 0.0052936077, -0.00034832954)
 mesh = SubResource("BoxMesh_dqxiu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=1935338930]
-shape = SubResource("BoxShape3D_dqxiu")
+visible = false
+shape = SubResource("BoxShape3D_g2xtj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137376276]
+environment = SubResource("Environment_dqxiu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1864162711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07329917, 1.7889979, 0.093639374)
+light_color = Color(0.9254902, 0.96862745, 1, 1)
+light_energy = 0.315
+shadow_enabled = true
+omni_range = 7.547
