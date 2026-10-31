@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://yfamwq4f0l8b"]
 
-[ext_resource type="Script" uid="uid://dvwj0tk2pj6ml" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://8dbo68ejkkpq" path="res://player.gd" id="1_ig7tw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
-size = Vector3(10, 0.02, 10)
+size = Vector3(10, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqxiu"]
 size = Vector3(10, 0.2, 10)
@@ -34,6 +34,7 @@ shape = SubResource("CapsuleShape3D_dqxiu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=273587252]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+shadow_opacity = 0.69
 
 [node name="-x office wall" type="StaticBody3D" parent="." unique_id=1228056842]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.0406065, 4.941186, 0)
@@ -71,11 +72,11 @@ mesh = SubResource("BoxMesh_dqxiu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=123324096]
 shape = SubResource("BoxShape3D_dqxiu")
 
-[node name="Floor6" type="StaticBody3D" parent="." unique_id=1118535340]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.016458988, 9.941253, 0.01022625)
+[node name="ceiling" type="StaticBody3D" parent="." unique_id=1118535340]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.016458988, 9.921029, 0.01022625)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor6" unique_id=1816838004]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ceiling" unique_id=1816838004]
 mesh = SubResource("BoxMesh_dqxiu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor6" unique_id=1935338930]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=1935338930]
 shape = SubResource("BoxShape3D_dqxiu")
