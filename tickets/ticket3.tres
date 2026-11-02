@@ -11,4 +11,5 @@ submitted_time = "13:46.11"
 title = "Printer Keeps Printing Blank Pages"
 description = "Not an IT guy but the printer keeps printing blank pages."
 target = "Printer"
+haunted = true
 metadata/_custom_type_script = "uid://0deimx6nue04"
