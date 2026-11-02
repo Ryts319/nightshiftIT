@@ -12,22 +12,10 @@ size = Vector3(3, 0.2, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
 size = Vector3(3, 0.2, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
-size = Vector3(1.2, 0.4, 3.5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
-size = Vector3(1.2, 0.4, 3.5)
-
 [sub_resource type="BoxMesh" id="BoxMesh_1bvp3"]
 size = Vector3(3, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
-size = Vector3(3, 0.2, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
-size = Vector3(3, 0.2, 10)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(3, 0.2, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
@@ -36,11 +24,41 @@ size = Vector3(3, 0.2, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
 size = Vector3(3, 0.2, 10)
 
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+size = Vector3(3, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3, 0.2, 10)
+
 [sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
 size = Vector3(10, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
 size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+size = Vector3(1.2, 0.4, 3.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
+size = Vector3(1.2, 0.4, 3.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xvmi2"]
+size = Vector3(0.75, 0.7, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e7dm"]
+size = Vector3(0.75, 0.7, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n0wcf"]
+size = Vector3(0.1, 0.7, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
+size = Vector3(0.1, 0.7, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7jj4f"]
+size = Vector3(1, 0.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qphb6"]
+size = Vector3(1, 0.6, 0.6)
 
 [node name="Office" type="Node3D" unique_id=359356810]
 
@@ -69,19 +87,6 @@ visible = false
 shape = SubResource("BoxShape3D_h2yge")
 metadata/_edit_lock_ = true
 
-[node name="Entry wall" type="StaticBody3D" parent="." unique_id=1287582679]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -3.5, 0.5, -3)
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Entry wall" unique_id=1833358041]
-mesh = SubResource("BoxMesh_h2yge")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Entry wall" unique_id=274001750]
-visible = false
-shape = SubResource("BoxShape3D_1bvp3")
-metadata/_edit_lock_ = true
-
 [node name="+x office wall" type="StaticBody3D" parent="." unique_id=1785799694]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 5, 1.6, 0)
 metadata/_edit_lock_ = true
@@ -93,19 +98,6 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=856907287]
 visible = false
 shape = SubResource("BoxShape3D_lquwl")
-metadata/_edit_lock_ = true
-
-[node name="+z office wall" type="StaticBody3D" parent="." unique_id=131152736]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, 5)
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=594716226]
-mesh = SubResource("BoxMesh_7mycd")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=227801847]
-visible = false
-shape = SubResource("BoxShape3D_272bh")
 metadata/_edit_lock_ = true
 
 [node name="-z office wall" type="StaticBody3D" parent="." unique_id=1044550622]
@@ -121,6 +113,19 @@ visible = false
 shape = SubResource("BoxShape3D_kek77")
 metadata/_edit_lock_ = true
 
+[node name="+z office wall" type="StaticBody3D" parent="." unique_id=131152736]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, 5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=594716226]
+mesh = SubResource("BoxMesh_7mycd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=227801847]
+visible = false
+shape = SubResource("BoxShape3D_272bh")
+metadata/_edit_lock_ = true
+
 [node name="ceiling" type="StaticBody3D" parent="." unique_id=1489833898]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.1, 0)
 metadata/_edit_lock_ = true
@@ -133,6 +138,60 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=1117586130]
 visible = false
 shape = SubResource("BoxShape3D_g2xtj")
+metadata/_edit_lock_ = true
+
+[node name="Entry wall" type="StaticBody3D" parent="." unique_id=1287582679]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -3.5, 0.5, -3)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Entry wall" unique_id=1833358041]
+mesh = SubResource("BoxMesh_h2yge")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entry wall" unique_id=274001750]
+visible = false
+shape = SubResource("BoxShape3D_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="Desk" type="StaticBody3D" parent="." unique_id=794559696]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -2, 0.48, 4.5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Desk" unique_id=1446461516]
+mesh = SubResource("BoxMesh_xvmi2")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Desk" unique_id=1962921215]
+visible = false
+shape = SubResource("BoxShape3D_3e7dm")
+metadata/_edit_lock_ = true
+
+[node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
+transform = Transform3D(8.742278e-08, 1, -4.3711385e-08, -4.3711385e-08, 4.3711392e-08, 1, 1, -8.742278e-08, 4.3711392e-08, -2, 1.2, 4.5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
+mesh = SubResource("BoxMesh_n0wcf")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor" unique_id=965506896]
+visible = false
+shape = SubResource("BoxShape3D_jwaux")
+debug_fill = false
+metadata/_edit_lock_ = true
+
+[node name="Printer" type="StaticBody3D" parent="." unique_id=370068415]
+transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 0, 0.6, 4.5)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Printer" unique_id=436123773]
+mesh = SubResource("BoxMesh_7jj4f")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Printer" unique_id=1647102322]
+visible = false
+shape = SubResource("BoxShape3D_qphb6")
+debug_fill = false
 metadata/_edit_lock_ = true
 
 [node name="ambientlight" type="OmniLight3D" parent="." unique_id=1479130593]
