@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Ticket" format=3 uid="uid://bgvrpwj46ngg8"]
+
+[ext_resource type="Script" uid="uid://0deimx6nue04" path="res://scripts/ticket.gd" id="1_pyfta"]
+
+[resource]
+script = ExtResource("1_pyfta")
+ticket_number = 1563
+submitted_by = "Max Connor"
+submitted_date = "08/25/2018"
+submitted_time = "10:04.25"
+title = "Printer Out of Toner"
+description = "Printing looks terrible!"
+target = "Printer"
+metadata/_custom_type_script = "uid://0deimx6nue04"

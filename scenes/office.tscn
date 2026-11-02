@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bndtgt58eoi7o" path="res://scripts/printer.gd" id="1_3e7dm"]
 [ext_resource type="Script" uid="uid://caibx3difcx4i" path="res://scripts/monitor.gd" id="1_n0wcf"]
+[ext_resource type="Script" uid="uid://p8ltgoq6u7di" path="res://scripts/monitor2.gd" id="2_jwaux"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(10, 0.2, 10)
@@ -51,10 +52,22 @@ size = Vector3(0.75, 0.7, 1.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e7dm"]
 size = Vector3(0.75, 0.7, 1.5)
 
+[sub_resource type="BoxMesh" id="BoxMesh_jwaux"]
+size = Vector3(0.75, 0.7, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jj4f"]
+size = Vector3(0.75, 0.7, 1.5)
+
 [sub_resource type="BoxMesh" id="BoxMesh_n0wcf"]
 size = Vector3(0.1, 0.7, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
+size = Vector3(0.1, 0.7, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qphb6"]
+size = Vector3(0.1, 0.7, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hub07"]
 size = Vector3(0.1, 0.7, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7jj4f"]
@@ -158,7 +171,7 @@ shape = SubResource("BoxShape3D_1bvp3")
 metadata/_edit_lock_ = true
 
 [node name="Desk" type="StaticBody3D" parent="." unique_id=794559696]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -2, 0.48, 4.5)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -2, 0.47, 4.5)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Desk" unique_id=1446461516]
@@ -168,6 +181,19 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk" unique_id=1962921215]
 visible = false
 shape = SubResource("BoxShape3D_3e7dm")
+metadata/_edit_lock_ = true
+
+[node name="Desk2" type="StaticBody3D" parent="." unique_id=1211647458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.47, 0)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Desk2" unique_id=661343008]
+mesh = SubResource("BoxMesh_jwaux")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Desk2" unique_id=1034776914]
+visible = false
+shape = SubResource("BoxShape3D_7jj4f")
 metadata/_edit_lock_ = true
 
 [node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
@@ -182,6 +208,21 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor" unique_id=965506896]
 visible = false
 shape = SubResource("BoxShape3D_jwaux")
+debug_fill = false
+metadata/_edit_lock_ = true
+
+[node name="Monitor2" type="StaticBody3D" parent="." unique_id=469552206]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.5, 1.2, 0)
+script = ExtResource("2_jwaux")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor2" unique_id=827792661]
+mesh = SubResource("BoxMesh_qphb6")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor2" unique_id=196573461]
+visible = false
+shape = SubResource("BoxShape3D_hub07")
 debug_fill = false
 metadata/_edit_lock_ = true
 

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Ticket" format=3 uid="uid://bnc1tn40sloui"]
+
+[ext_resource type="Script" uid="uid://0deimx6nue04" path="res://scripts/ticket.gd" id="1_mqo6e"]
+
+[resource]
+script = ExtResource("1_mqo6e")
+ticket_number = 1564
+submitted_by = "Tanner Garvin"
+submitted_date = "08/25/2018"
+submitted_time = "10:46.65"
+title = "Screen Flickering"
+description = "Screen keeps flickering."
+target = "Monitor2"
+metadata/_custom_type_script = "uid://0deimx6nue04"

@@ -21,17 +21,20 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
 	elif event.is_action_pressed("interact"):
-		if raycast.is_colliding():
-			var target = raycast.get_collider()
-			if target.has_method("interact"):
-				target.interact()
+		var target = get_interact_target()
+		if target != null:
+			target.interact()
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
 		
-func _process(delta: float) -> void:
+func get_interact_target():
 	var target = raycast.get_collider()
-	prompt.visible = target != null and target.has_method("interact")
+	if target != null and target.has_method("interact"):
+		return target
+	return null
 		
+func _process(delta: float) -> void:
+	prompt.visible = get_interact_target() != null
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

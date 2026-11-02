@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Ticket" format=3 uid="uid://dv6ygwd8fmqhv"]
+
+[ext_resource type="Script" uid="uid://0deimx6nue04" path="res://scripts/ticket.gd" id="1_3p06d"]
+
+[resource]
+script = ExtResource("1_3p06d")
+ticket_number = 1566
+submitted_by = "James Meter"
+submitted_date = "08/25/2018"
+submitted_time = "13:46.11"
+title = "Printer Keeps Printing Blank Pages"
+description = "Not an IT guy but the printer keeps printing blank pages."
+target = "Printer"
+metadata/_custom_type_script = "uid://0deimx6nue04"
