@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var max_pitch_degrees: float = 89.0 # highest player can look up
 
 @onready var camera: Camera3D = $Camera3D
+@onready var raycast: RayCast3D = $Camera3D/RayCast3D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -18,6 +19,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x, -max_pitch, max_pitch)
 	elif event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
+	elif event.is_action_pressed("interact"):
+		if raycast.is_colliding():
+			if raycast.get_collider().name == "Printer":
+				print("Printering")
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
 
@@ -38,3 +43,7 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
 	move_and_slide()
+	
+# when player presses interact
+#   if raycast is hitting something
+#     print the name of the thing it hit

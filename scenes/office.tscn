@@ -181,7 +181,7 @@ debug_fill = false
 metadata/_edit_lock_ = true
 
 [node name="Printer" type="StaticBody3D" parent="." unique_id=370068415]
-transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 0, 0.6, 4.5)
+transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 0, 0.6, -4.5)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Printer" unique_id=436123773]
