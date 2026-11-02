@@ -64,6 +64,7 @@ size = Vector3(1, 0.6, 0.6)
 size = Vector3(1, 0.6, 0.6)
 
 [node name="Office" type="Node3D" unique_id=359356810]
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1292048453]
 metadata/_edit_lock_ = true
@@ -213,3 +214,4 @@ shadow_enabled = true
 shadow_normal_bias = 0.0
 shadow_opacity = 0.35
 spot_angle = 25.17895
+metadata/_edit_lock_ = true
