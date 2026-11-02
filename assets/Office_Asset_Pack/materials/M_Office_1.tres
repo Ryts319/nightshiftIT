@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" uid="uid://m6mivvm0c0eh" path="res://assets/Office_Asset_Pack/FBX/T_Office_1_Basecolor_2k.png" id="1_albedo"]
+[ext_resource type="Texture2D" uid="uid://c0rhqhauma8ma" path="res://assets/Office_Asset_Pack/FBX/T_Office_1_Normal_2k.png" id="2_normal"]
+[ext_resource type="Texture2D" uid="uid://7o1keyorlpi4" path="res://assets/Office_Asset_Pack/FBX/T_Office_1_Roughness_2k.png" id="3_rough"]
+
+[resource]
+resource_name = "M_Office_1"
+albedo_texture = ExtResource("1_albedo")
+roughness_texture = ExtResource("3_rough")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")

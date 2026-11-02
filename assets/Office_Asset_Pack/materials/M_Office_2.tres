@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" uid="uid://clcpkwu0gf4yc" path="res://assets/Office_Asset_Pack/FBX/T_Office_2_Basecolor_2k.png" id="1_albedo"]
+[ext_resource type="Texture2D" uid="uid://dna1c4bbxjh3a" path="res://assets/Office_Asset_Pack/FBX/T_Office_2_Normal_2k.png" id="2_normal"]
+[ext_resource type="Texture2D" uid="uid://cw1awhwtldj3d" path="res://assets/Office_Asset_Pack/FBX/T_Office_2_Roughness_2k.png" id="3_rough"]
+[ext_resource type="Texture2D" uid="uid://c3wlddl5nyv7r" path="res://assets/Office_Asset_Pack/FBX/T_Office_2_Metallic_2k.png" id="4_metal"]
+
+[resource]
+resource_name = "M_Office_2"
+albedo_texture = ExtResource("1_albedo")
+metallic = 1.0
+metallic_texture = ExtResource("4_metal")
+roughness_texture = ExtResource("3_rough")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")
