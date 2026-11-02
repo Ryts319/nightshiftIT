@@ -7,6 +7,7 @@ extends CharacterBody3D
 
 @onready var camera: Camera3D = $Camera3D
 @onready var raycast: RayCast3D = $Camera3D/RayCast3D
+@onready var prompt: Label = $HUD/InteractPrompt
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -26,6 +27,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				target.interact()
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
+		
+func _process(delta: float) -> void:
+	var target = raycast.get_collider()
+	prompt.visible = target != null and target.has_method("interact")
+		
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

@@ -17,3 +17,21 @@ target_position = Vector3(0, 0, -2)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=883741981]
 shape = SubResource("CapsuleShape3D_dqxiu")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2060506410]
+
+[node name="InteractPrompt" type="Label" parent="HUD" unique_id=1977090571]
+visible = false
+offset_left = 564.0
+offset_top = 292.0
+offset_right = 585.0
+offset_bottom = 315.0
+text = "E"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="HUD" unique_id=686621767]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
