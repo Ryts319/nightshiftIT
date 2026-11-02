@@ -44,7 +44,3 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
 	move_and_slide()
-	
-# when player presses interact
-#   if raycast is hitting something
-#     print the name of the thing it hit

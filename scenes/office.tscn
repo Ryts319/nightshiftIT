@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bilq5teaxnig"]
 
 [ext_resource type="Script" uid="uid://bndtgt58eoi7o" path="res://scripts/printer.gd" id="1_3e7dm"]
+[ext_resource type="Script" uid="uid://caibx3difcx4i" path="res://scripts/monitor.gd" id="1_n0wcf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(10, 0.2, 10)
@@ -170,6 +171,7 @@ metadata/_edit_lock_ = true
 
 [node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
 transform = Transform3D(8.742278e-08, 1, -4.3711385e-08, -4.3711385e-08, 4.3711392e-08, 1, 1, -8.742278e-08, 4.3711392e-08, -2, 1.2, 4.5)
+script = ExtResource("1_n0wcf")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
