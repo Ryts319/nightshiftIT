@@ -50,19 +50,19 @@ size = Vector3(1.2, 0.4, 3.5)
 size = Vector3(1.2, 0.4, 3.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e7dm"]
-size = Vector3(0.75439995527267, 1.10000002384186, 2.0)
+size = Vector3(0.75439996, 1.1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7jj4f"]
-size = Vector3(1.10000002384186, 0.75439995527267, 2.0)
+size = Vector3(1.1, 0.75439996, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
-size = Vector3(0.21999999880791, 0.55000001192093, 0.38259997963905)
+size = Vector3(0.22, 0.55, 0.38259998)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hub07"]
-size = Vector3(0.21999999880791, 0.55000001192093, 0.38259997963905)
+size = Vector3(0.22, 0.55, 0.38259998)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qphb6"]
-size = Vector3(1.11000001430511, 0.76099997758865, 0.85949999094009)
+size = Vector3(1.11, 0.761, 0.8595)
 
 [node name="Office" type="Node3D" unique_id=359356810]
 metadata/_edit_lock_ = true
@@ -163,12 +163,12 @@ transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.3
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Desk" unique_id=1446461516]
-transform = Transform3D(0.0, 0.0, 100.0, -100.0, 0.0, 0.0, 0.0, -100.0, 0.0, -0.37, -0.15, 0.0)
+transform = Transform3D(0, 0, 100, -100, 0, 0, 0, -100, 0, -0.37, -0.15, 0)
 mesh = ExtResource("4_table")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk" unique_id=1962921215]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0072, -0.15, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0072, -0.15, 0)
 visible = false
 shape = SubResource("BoxShape3D_3e7dm")
 metadata/_edit_lock_ = true
@@ -178,12 +178,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.47, 0)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Desk2" unique_id=661343008]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, 0.0, 100.0, 0.0, 100.0, 0.0, -0.15, -0.37, 0.0)
+transform = Transform3D(-100, 0, 0, 0, 0, 100, 0, 100, 0, -0.15, -0.37, 0)
 mesh = ExtResource("4_table")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk2" unique_id=1034776914]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, -0.15, 0.0072, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.0072, 0)
 visible = false
 shape = SubResource("BoxShape3D_7jj4f")
 metadata/_edit_lock_ = true
@@ -194,12 +194,12 @@ script = ExtResource("1_n0wcf")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, -100.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, -0.3456)
+transform = Transform3D(-100, 0, 0, 0, -100, 0, 0, 0, 100, 0, 0, -0.3456)
 mesh = ExtResource("5_lcd")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor" unique_id=965506896]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -0.1543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1543)
 visible = false
 shape = SubResource("BoxShape3D_jwaux")
 debug_fill = false
@@ -211,12 +211,12 @@ script = ExtResource("2_jwaux")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor2" unique_id=827792661]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, 0.0, -100.0, 0.0, 0.0, 0.3456)
+transform = Transform3D(-100, 0, 0, 0, 100, 0, 0, 0, -100, 0, 0, 0.3456)
 mesh = ExtResource("5_lcd")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor2" unique_id=196573461]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.1543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1543)
 visible = false
 shape = SubResource("BoxShape3D_hub07")
 debug_fill = false
@@ -228,12 +228,12 @@ script = ExtResource("1_3e7dm")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Printer" unique_id=436123773]
-transform = Transform3D(0.0, 0.0, 100.0, 100.0, 0.0, 0.0, 0.0, 100.0, 0.0, -0.5, -0.0612, -0.096)
+transform = Transform3D(0, 0, 100, 100, 0, 0, 0, 100, 0, -0.5, -0.0612, -0.096)
 mesh = ExtResource("6_printer")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Printer" unique_id=1647102322]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.055, -0.0195, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055, -0.0195, 0)
 visible = false
 shape = SubResource("BoxShape3D_qphb6")
 debug_fill = false
