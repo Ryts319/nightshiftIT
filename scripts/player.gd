@@ -21,8 +21,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
 	elif event.is_action_pressed("interact"):
 		if raycast.is_colliding():
-			if raycast.get_collider().name == "Printer":
-				print("Printering")
+			var target = raycast.get_collider()
+			if target.has_method("interact"):
+				target.interact()
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
 

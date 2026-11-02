@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bilq5teaxnig"]
 
+[ext_resource type="Script" uid="uid://bndtgt58eoi7o" path="res://scripts/printer.gd" id="1_3e7dm"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(10, 0.2, 10)
 
@@ -182,6 +184,7 @@ metadata/_edit_lock_ = true
 
 [node name="Printer" type="StaticBody3D" parent="." unique_id=370068415]
 transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 0, 0.6, -4.5)
+script = ExtResource("1_3e7dm")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Printer" unique_id=436123773]
