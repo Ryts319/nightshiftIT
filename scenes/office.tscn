@@ -1,47 +1,34 @@
 [gd_scene format=3 uid="uid://bilq5teaxnig"]
 
+[ext_resource type="ArrayMesh" uid="uid://5x8vui2eigpb" path="res://assets/Office_Asset_Pack/meshes/SM_Ceiling_001.res" id="1_2knxt"]
 [ext_resource type="Script" uid="uid://bndtgt58eoi7o" path="res://scripts/printer.gd" id="1_3e7dm"]
+[ext_resource type="ArrayMesh" uid="uid://coiq2xpvnj1my" path="res://assets/Office_Asset_Pack/meshes/SM_Concrete_Wall_001.res" id="1_fmddn"]
+[ext_resource type="ArrayMesh" uid="uid://xyxutykg00d6" path="res://assets/Office_Asset_Pack/meshes/SM_Floor_Linoleum_001.res" id="1_gdafm"]
 [ext_resource type="Script" uid="uid://caibx3difcx4i" path="res://scripts/monitor.gd" id="1_n0wcf"]
 [ext_resource type="Script" uid="uid://p8ltgoq6u7di" path="res://scripts/monitor2.gd" id="2_jwaux"]
+[ext_resource type="PackedScene" uid="uid://vdr1hn717djy" path="res://scenes/desk.tscn" id="4_o23kw"]
 [ext_resource type="ArrayMesh" uid="uid://02h83fgjf8v8" path="res://assets/Office_Asset_Pack/meshes/SM_Table_Type_1_001.res" id="4_table"]
 [ext_resource type="ArrayMesh" uid="uid://blapx2o4j0nyd" path="res://assets/Office_Asset_Pack/meshes/SM_LCD_Monitor_001.res" id="5_lcd"]
+[ext_resource type="ArrayMesh" uid="uid://5itcckl8v3ch" path="res://assets/Office_Asset_Pack/meshes/SM_Office_Chair_001.res" id="5_wruke"]
 [ext_resource type="ArrayMesh" uid="uid://dagusqpehbw3l" path="res://assets/Office_Asset_Pack/meshes/SM_Standing_Printer_001.res" id="6_printer"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
-size = Vector3(10, 0.2, 10)
+[ext_resource type="ArrayMesh" uid="uid://rncnkc1d0st8" path="res://assets/Office_Asset_Pack/meshes/SM_Office_Partition_001.res" id="10_in4ui"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqxiu"]
 size = Vector3(10, 0.2, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
-size = Vector3(3, 0.2, 10)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
-size = Vector3(3, 0.2, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_1bvp3"]
 size = Vector3(3, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
 size = Vector3(3, 0.2, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
-size = Vector3(3, 0.2, 10)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
-size = Vector3(3, 0.2, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
 size = Vector3(3, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(3, 0.2, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_dqxiu"]
-size = Vector3(10, 0.2, 10)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
-size = Vector3(10, 0.2, 10)
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_fmddn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
 size = Vector3(1.2, 0.4, 3.5)
@@ -50,19 +37,22 @@ size = Vector3(1.2, 0.4, 3.5)
 size = Vector3(1.2, 0.4, 3.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e7dm"]
-size = Vector3(0.75439995527267, 1.10000002384186, 2.0)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7jj4f"]
-size = Vector3(1.10000002384186, 0.75439995527267, 2.0)
+size = Vector3(0.75439996, 1.1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
-size = Vector3(0.21999999880791, 0.55000001192093, 0.38259997963905)
+size = Vector3(0.22, 0.55, 0.38259998)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jj4f"]
+size = Vector3(1.1, 0.75439996, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hub07"]
-size = Vector3(0.21999999880791, 0.55000001192093, 0.38259997963905)
+size = Vector3(0.22, 0.55, 0.38259998)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qphb6"]
-size = Vector3(1.11000001430511, 0.76099997758865, 0.85949999094009)
+size = Vector3(1.11, 0.761, 0.8595)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_og2xu"]
+size = Vector3(0.05970764, 1.4998779, 2.0088348)
 
 [node name="Office" type="Node3D" unique_id=359356810]
 metadata/_edit_lock_ = true
@@ -71,7 +61,83 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=719072532]
-mesh = SubResource("BoxMesh_ig7tw")
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 3.5, 0.0999998, -5.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Floor" unique_id=182775178]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 3.5, 0.09999992, -2.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Floor" unique_id=838044410]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 3.5000002, 0.100000024, 0.39999962)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Floor" unique_id=1214653928]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 3.5, 0.100000024, 3.3999996)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Floor" unique_id=179812210]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0.5, 0.099999666, -5.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Floor" unique_id=705146667]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0.5, 0.099999934, -2.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Floor" unique_id=1887372084]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0.5, 0.10000005, 0.39999962)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Floor" unique_id=215210721]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0.5, 0.100000024, 3.3999996)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Floor" unique_id=1627927792]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -2.5, 0.099999666, -5.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Floor" unique_id=1394482166]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -2.5, 0.0999998, -2.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Floor" unique_id=390273249]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -2.5, 0.099999934, 0.39999962)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Floor" unique_id=550496708]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -2.5, 0.100000024, 3.3999996)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Floor" unique_id=225944870]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -5.5, 0.099999666, -5.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Floor" unique_id=472367952]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -5.5, 0.0999998, -2.6000004)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Floor" unique_id=816266981]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -5.5, 0.099999934, 0.39999962)
+mesh = ExtResource("1_gdafm")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Floor" unique_id=1712976346]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, -5.5, 0.100000024, 3.3999996)
+mesh = ExtResource("1_gdafm")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1562306739]
@@ -83,11 +149,28 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5, 1.6, 0)
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="-x office wall" unique_id=492119476]
-mesh = SubResource("BoxMesh_0xm2m")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="-x office wall" unique_id=1693171558]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5000002, 1.9999995, 3.3999996)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="-x office wall" unique_id=2124150364]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5000004, 1.9999995, 0.39999956)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="-x office wall" unique_id=321710627]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5000005, 1.9999995, -2.6000004)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="-x office wall" unique_id=1998280487]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5000006, 1.9999995, -5.6000004)
+mesh = ExtResource("1_fmddn")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-x office wall" unique_id=2019541513]
+transform = Transform3D(1, 3.5527137e-15, -3.5527137e-15, -3.5527137e-15, 1, 1.6420283e-15, 0, -2.4264695e-22, 1, 0, 0, 0)
 visible = false
 shape = SubResource("BoxShape3D_h2yge")
 metadata/_edit_lock_ = true
@@ -97,7 +180,23 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 5, 1
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="+x office wall" unique_id=1663772482]
-mesh = SubResource("BoxMesh_1bvp3")
+transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5, 0, 3.3999996)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="+x office wall" unique_id=846689435]
+transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5, 0, 0.39999962)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="+x office wall" unique_id=564880552]
+transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000001, 0, -2.6000004)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="+x office wall" unique_id=1655173940]
+transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000002, 0, -5.6000004)
+mesh = ExtResource("1_fmddn")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=856907287]
@@ -109,8 +208,24 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, -5)
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="-z office wall" unique_id=1856116952]
-mesh = SubResource("BoxMesh_5vw27")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="-z office wall" unique_id=304991128]
+transform = Transform3D(0, 4.3710475e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000005, -2.1000004, 3.5)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="-z office wall" unique_id=1592877681]
+transform = Transform3D(0, 4.3710534e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000006, -2.1000004, 0.50000006)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="-z office wall" unique_id=401385248]
+transform = Transform3D(0, 4.371059e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000007, -2.1000004, -2.5)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="-z office wall" unique_id=1932611103]
+transform = Transform3D(0, 4.37082e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000008, -2.1000009, -5.4999995)
+mesh = ExtResource("1_fmddn")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=458833214]
@@ -122,8 +237,24 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 1.6, 5)
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="+z office wall" unique_id=594716226]
-mesh = SubResource("BoxMesh_7mycd")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="+z office wall" unique_id=329031705]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, 3.5)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="+z office wall" unique_id=2100908950]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, 0.49999994)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="+z office wall" unique_id=988529430]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, -2.5)
+mesh = ExtResource("1_fmddn")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="+z office wall" unique_id=1246693795]
+transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000086, -5.5)
+mesh = ExtResource("1_fmddn")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=227801847]
@@ -135,18 +266,100 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.1, 0)
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ceiling" unique_id=171390657]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00022053719, 0.0052936077, -0.00034832954)
-mesh = SubResource("BoxMesh_dqxiu")
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ceiling" unique_id=130409894]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, -5.499999)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ceiling" unique_id=104175747]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000001, -4.7683716e-07, -2.4999995)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="ceiling" unique_id=1208341780]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000006, -4.7683716e-07, 0.5000011)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="ceiling" unique_id=683727916]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999993, -4.7683716e-07, 3.5000014)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="ceiling" unique_id=2141024629]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6, -2.3841858e-07, 3.5000002)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="ceiling" unique_id=1329578816]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000001, -4.7683716e-07, 3.5000014)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="ceiling" unique_id=20748474]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999999, -4.7683716e-07, 3.5000012)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="ceiling" unique_id=2008961426]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, 0.5000013)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="ceiling" unique_id=998947519]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999994, -4.7683716e-07, 0.5000012)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="ceiling" unique_id=20712270]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, 0.50000083)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="ceiling" unique_id=176367862]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, -2.4999993)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="ceiling" unique_id=993780429]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999995, -4.7683716e-07, -2.4999988)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="ceiling" unique_id=1333451611]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, -5.499999)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="ceiling" unique_id=600911766]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.39999962, -4.7683716e-07, -5.499999)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="ceiling" unique_id=1882455743]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000004, -4.7683716e-07, -5.499999)
+mesh = ExtResource("1_2knxt")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="ceiling" unique_id=1803682772]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, -2.499999)
+mesh = ExtResource("1_2knxt")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=1117586130]
 visible = false
-shape = SubResource("BoxShape3D_g2xtj")
+shape = SubResource("HeightMapShape3D_fmddn")
 metadata/_edit_lock_ = true
 
+[node name="Desk3" parent="." unique_id=1003234115 instance=ExtResource("4_o23kw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0020613074, 0.10000007, 1.3196708)
+
+[node name="SmOfficeChair001" type="MeshInstance3D" parent="Desk3" unique_id=793038579]
+transform = Transform3D(-71.32504, 70.090935, 3.0637718e-06, 0, -4.371139e-06, 100, 70.090935, 71.32504, 3.1177165e-06, 0.8949034, 0.10329027, 0.09538174)
+mesh = ExtResource("5_wruke")
+
 [node name="Entry wall" type="StaticBody3D" parent="." unique_id=1287582679]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -3.5, 0.5, -3)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -5.2499995, 0.69999933, -3.9000003)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Entry wall" unique_id=1833358041]
@@ -159,18 +372,35 @@ shape = SubResource("BoxShape3D_1bvp3")
 metadata/_edit_lock_ = true
 
 [node name="Desk" type="StaticBody3D" parent="." unique_id=794559696]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -2, 0.47, 4.5)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 0, 0.47, 2.373)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Desk" unique_id=1446461516]
-transform = Transform3D(0.0, 0.0, 100.0, -100.0, 0.0, 0.0, 0.0, -100.0, 0.0, -0.37, -0.15, 0.0)
+transform = Transform3D(0, -4.3711393e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -0.37000003, -0.1500001, -7.1054274e-15)
 mesh = ExtResource("4_table")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk" unique_id=1962921215]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0072, -0.15, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007199973, -0.1500001, -7.1054274e-15)
 visible = false
 shape = SubResource("BoxShape3D_3e7dm")
+metadata/_edit_lock_ = true
+
+[node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.3711392e-08, 1, -1, 4.371139e-08, 5.194742e-15, 0.011000001, 1.2, 2.25)
+script = ExtResource("1_n0wcf")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
+transform = Transform3D(-100, 8.742278e-06, 0, -8.742278e-06, -100, 0, 0, 0, 100, 0, 0, -0.3456)
+mesh = ExtResource("5_lcd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor" unique_id=965506896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1543)
+visible = false
+shape = SubResource("BoxShape3D_jwaux")
+debug_fill = false
 metadata/_edit_lock_ = true
 
 [node name="Desk2" type="StaticBody3D" parent="." unique_id=1211647458]
@@ -178,31 +408,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.47, 0)
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Desk2" unique_id=661343008]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, 0.0, 100.0, 0.0, 100.0, 0.0, -0.15, -0.37, 0.0)
+transform = Transform3D(-100, 0, 0, 0, 0, 100, 0, 100, 0, -0.15, -0.37, 0)
 mesh = ExtResource("4_table")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk2" unique_id=1034776914]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, -0.15, 0.0072, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.0072, 0)
 visible = false
 shape = SubResource("BoxShape3D_7jj4f")
-metadata/_edit_lock_ = true
-
-[node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
-transform = Transform3D(8.742278e-08, 1, -4.3711385e-08, -4.3711385e-08, 4.3711392e-08, 1, 1, -8.742278e-08, 4.3711392e-08, -2, 1.2, 4.5)
-script = ExtResource("1_n0wcf")
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, -100.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, -0.3456)
-mesh = ExtResource("5_lcd")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor" unique_id=965506896]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -0.1543)
-visible = false
-shape = SubResource("BoxShape3D_jwaux")
-debug_fill = false
 metadata/_edit_lock_ = true
 
 [node name="Monitor2" type="StaticBody3D" parent="." unique_id=469552206]
@@ -211,32 +424,84 @@ script = ExtResource("2_jwaux")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor2" unique_id=827792661]
-transform = Transform3D(-100.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, 0.0, -100.0, 0.0, 0.0, 0.3456)
+transform = Transform3D(-100, 0, 0, 0, 100, 0, 0, 0, -100, 0, 0, 0.3456)
 mesh = ExtResource("5_lcd")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor2" unique_id=196573461]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.1543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1543)
 visible = false
 shape = SubResource("BoxShape3D_hub07")
 debug_fill = false
 metadata/_edit_lock_ = true
 
 [node name="Printer" type="StaticBody3D" parent="." unique_id=370068415]
-transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 0, 0.6, -4.5)
+transform = Transform3D(-8.742276e-08, 1.3113417e-07, 1, 1, -1.3113416e-07, 8.742279e-08, 1.3113417e-07, 1, -1.3113416e-07, 1.796, 0.59999955, -6.7288003)
 script = ExtResource("1_3e7dm")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Printer" unique_id=436123773]
-transform = Transform3D(0.0, 0.0, 100.0, 100.0, 0.0, 0.0, 0.0, 100.0, 0.0, -0.5, -0.0612, -0.096)
+transform = Transform3D(0, 0, 100, 100, 0, 0, 0, 100, 0, -0.5, -0.0612, -0.096)
 mesh = ExtResource("6_printer")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Printer" unique_id=1647102322]
-transform = Transform3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.055, -0.0195, 0.0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055, -0.0195, 0)
 visible = false
 shape = SubResource("BoxShape3D_qphb6")
 debug_fill = false
+metadata/_edit_lock_ = true
+
+[node name="Dividers" type="StaticBody3D" parent="." unique_id=1953433687]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Dividers" unique_id=1118416321]
+transform = Transform3D(-4.371139e-06, -100, 4.371139e-06, 0, -4.371139e-06, -100, 100, -4.371139e-06, 1.9106854e-13, -0.019155025, 1.6, 1.9070203)
+mesh = ExtResource("10_in4ui")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Dividers" unique_id=736539038]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.023018122, 0.8512483, 1.906464)
+shape = SubResource("BoxShape3D_og2xu")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dividers" unique_id=1657166382]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Dividers/StaticBody3D" unique_id=1264041597]
+transform = Transform3D(-4.371139e-06, -100, 4.371139e-06, 0, -4.371139e-06, -100, 100, -4.371139e-06, 1.9106854e-13, -2.029571, 1.6, 1.9070203)
+mesh = ExtResource("10_in4ui")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Dividers/StaticBody3D" unique_id=1360066408]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.0334344, 0.8512483, 1.906464)
+shape = SubResource("BoxShape3D_og2xu")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Dividers" unique_id=1180669343]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -1.03, 1.6, 2.9084134)
+mesh = ExtResource("10_in4ui")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Dividers" unique_id=1379692387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.029815, 0.851062, 2.904843)
+shape = SubResource("BoxShape3D_og2xu")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Dividers" unique_id=1338011413]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -1.03, 1.6, 0.9084619)
+mesh = ExtResource("10_in4ui")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dividers" unique_id=1886047088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.029815, 0.8516231, 0.91191196)
+shape = SubResource("BoxShape3D_og2xu")
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="ambientlight" type="OmniLight3D" parent="." unique_id=1479130593]
