@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://by22a45fls6j1"]
+
+[ext_resource type="Script" uid="uid://84ipsd0cfble" path="res://scripts/ticket_screen.gd" id="1_0c1si"]
+
+[node name="TicketScreen" type="Control" unique_id=805633814]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0c1si")
+
+[node name="AppWindow" type="Panel" parent="." unique_id=1537610918]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09461805
+anchor_top = 0.08796296
+anchor_right = 0.9053819
+anchor_bottom = 0.912037
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MainLayout" type="VBoxContainer" parent="AppWindow" unique_id=1835143569]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Label" parent="AppWindow/MainLayout" unique_id=914246192]
+layout_mode = 2
+text = "HelpDesk Pro v3.2"
+
+[node name="Content" type="HBoxContainer" parent="AppWindow/MainLayout" unique_id=1557584598]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TicketList" type="ItemList" parent="AppWindow/MainLayout/Content" unique_id=709861625]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Details" type="RichTextLabel" parent="AppWindow/MainLayout/Content" unique_id=1274023673]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="CloseButton" type="Button" parent="AppWindow/MainLayout" unique_id=2021598671]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Close"
+
+[connection signal="item_selected" from="AppWindow/MainLayout/Content/TicketList" to="." method="_on_ticket_list_item_selected"]
