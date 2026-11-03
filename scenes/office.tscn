@@ -39,11 +39,11 @@ size = Vector3(1.2, 0.4, 3.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e7dm"]
 size = Vector3(0.75439996, 1.1, 2)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
-size = Vector3(0.22, 0.55, 0.38259998)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_7jj4f"]
 size = Vector3(1.1, 0.75439996, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jwaux"]
+size = Vector3(0.22, 0.55, 0.38259998)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hub07"]
 size = Vector3(0.22, 0.55, 0.38259998)
