@@ -4,10 +4,15 @@ extends CharacterBody3D
 @export var gravity: float = 9.8
 @export var mouse_sensitivity: float = 0.002 # radians per pixel
 @export var max_pitch_degrees: float = 89.0 # highest player can look up
+@export var crouch_speed: float = 1.5
+@export var crouch_height: float = 0.0
+@export var stand_height: float = 0.6
+@export var is_crouching := false
 
 @onready var camera: Camera3D = $Camera3D
 @onready var raycast: RayCast3D = $Camera3D/RayCast3D
 @onready var prompt: Label = $HUD/InteractPrompt
+@onready var crouch: CollisionShape3D = $CollisionShape3D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -24,15 +29,18 @@ func _unhandled_input(event: InputEvent) -> void:
 		var target = get_interact_target()
 		if target != null:
 			target.interact()
+	elif event.is_action_pressed("crouch"):
+		is_crouching = not is_crouching
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
+	
 		
 func get_interact_target():
 	var target = raycast.get_collider()
 	if target != null and target.has_method("interact"):
 		return target
 	return null
-		
+
 func _process(delta: float) -> void:
 	prompt.visible = get_interact_target() != null
 
@@ -45,11 +53,17 @@ func _physics_process(delta: float) -> void:
 		"move_forward",
 		"move_backward"
 	)
+	
 	var direction := transform.basis * Vector3(
 		input_direction.x,
 		0.0,
 		input_direction.y
 	)
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
+	var current_speed := crouch_speed if is_crouching else speed
+	velocity.x = direction.x * current_speed
+	velocity.z = direction.z * current_speed
+	
+	var target_height := crouch_height if is_crouching else stand_height
+	camera.position.y = lerp(camera.position.y, target_height, 10.0 * delta)
+	
 	move_and_slide()

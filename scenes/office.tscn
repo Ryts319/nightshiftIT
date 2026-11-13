@@ -14,7 +14,7 @@
 [ext_resource type="ArrayMesh" uid="uid://rncnkc1d0st8" path="res://assets/Office_Asset_Pack/meshes/SM_Office_Partition_001.res" id="10_in4ui"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqxiu"]
-size = Vector3(10, 0.2, 10)
+size = Vector3(11.461914, 0.2, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
 size = Vector3(3, 0.2, 10)
@@ -141,7 +141,7 @@ mesh = ExtResource("1_gdafm")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1562306739]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73095703, 0, 0)
 shape = SubResource("BoxShape3D_dqxiu")
 metadata/_edit_lock_ = true
 
@@ -367,7 +367,6 @@ mesh = SubResource("BoxMesh_h2yge")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Entry wall" unique_id=274001750]
-visible = false
 shape = SubResource("BoxShape3D_1bvp3")
 metadata/_edit_lock_ = true
 
