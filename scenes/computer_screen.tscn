@@ -34,10 +34,11 @@ shape = SubResource("BoxShape3D_g2xtj")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=255098118]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.042827576)
-light_energy = 0.72
+light_energy = 0.335
+shadow_enabled = true
 shadow_bias = 0.1
-shadow_blur = 10.0
+shadow_blur = 9.665
 spot_range = 3.705
-spot_angle = 49.85
+spot_angle = 54.08
 
 [connection signal="input_event" from="ScreenArea" to="." method="_on_screen_area_input_event"]
