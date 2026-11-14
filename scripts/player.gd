@@ -13,6 +13,7 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $Camera3D/RayCast3D
 @onready var prompt: Label = $HUD/InteractPrompt
 @onready var crouch: CollisionShape3D = $CollisionShape3D
+@onready var stand_prompt: Label = $HUD/StandPrompt
 
 var is_seated := false
 var standing_camera_transform: Transform3D
@@ -29,15 +30,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotate_x(-event.relative.y * mouse_sensitivity) # pitch only tilts the camera
 		var max_pitch := deg_to_rad(max_pitch_degrees)
 		camera.rotation.x = clamp(camera.rotation.x, -max_pitch, max_pitch)
-	elif event.is_action_pressed("ui_cancel"):
+	elif event.is_action_pressed("interact"):
 		if is_seated:
 			get_tree().get_first_node_in_group("ticket_screen").close()
 		else:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
-	elif event.is_action_pressed("interact") and not is_seated:
-		var target = get_interact_target()
-		if target != null:
-			target.interact()
+			var target = get_interact_target()
+			if target != null:
+				target.interact()
 	elif event.is_action_pressed("crouch"):
 		is_crouching = not is_crouching
 	elif event is InputEventMouseButton and event.pressed and not is_seated:
@@ -71,6 +70,7 @@ func get_interact_target():
 
 func _process(delta: float) -> void:
 		prompt.visible = get_interact_target() != null and not is_seated
+		stand_prompt.visible = is_seated
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dtc3jf8dqpiyp"]
+
+[ext_resource type="Script" uid="uid://c17o1y6wc3iu7" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+
+[sub_resource type="Theme" id="Theme_myx47"]
+default_font_size = 32
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1365855514]
+script = ExtResource("1_n87rw")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=335554085]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_myx47")
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Menu" type="VBoxContainer" parent="Dim" unique_id=467791306]
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Dim/Menu" unique_id=1001207282]
+layout_mode = 2
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Dim/Menu" unique_id=1641672289]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="Dim/Menu" unique_id=1871115863]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Dim/Menu/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Dim/Menu/QuitButton" to="." method="_on_quit_button_pressed"]

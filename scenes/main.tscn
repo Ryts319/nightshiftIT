@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bilq5teaxnig" path="res://scenes/office.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c8t2acpftydll" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dtc3jf8dqpiyp" path="res://scenes/pause_menu.tscn" id="3_sugp2"]
 
 [sub_resource type="Environment" id="Environment_dqxiu"]
 background_mode = 1
@@ -21,3 +22,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35348344, 1.2, 3.730547)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137376276]
 environment = SubResource("Environment_dqxiu")
+
+[node name="PauseMenu" parent="." unique_id=1365855514 instance=ExtResource("3_sugp2")]

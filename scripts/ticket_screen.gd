@@ -10,9 +10,11 @@ func _ready() -> void:
 
 func open() -> void:
 	refresh()
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	get_tree().get_first_node_in_group("computer_screen").activate()
 
 func close() -> void:
+	get_tree().get_first_node_in_group("computer_screen").deactivate()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	get_tree().get_first_node_in_group("player").stand_up()
 

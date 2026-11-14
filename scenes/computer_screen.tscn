@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ull7wrabsmhw"]
 
-[ext_resource type="Script" uid="uid://dm6fjtmab0vgw" path="res://scenes/computer_screen.gd" id="1_gkxp2"]
+[ext_resource type="Script" uid="uid://dm6fjtmab0vgw" path="res://scripts/computer_screen.gd" id="1_gkxp2"]
 [ext_resource type="PackedScene" uid="uid://by22a45fls6j1" path="res://scenes/ticket_screen.tscn" id="2_hd5qy"]
+[ext_resource type="Texture2D" uid="uid://bta16wpfte8qa" path="res://assets/cursor/cursor.svg" id="3_hd5qy"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_dqxiu"]
 resource_local_to_scene = true
@@ -10,9 +11,6 @@ size = Vector2(0.5, 0.28)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2xtj"]
 resource_local_to_scene = true
 shading_mode = 0
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
-size = Vector3(0.5, 0.28, 0.01)
 
 [node name="ComputerScreen" type="Node3D" unique_id=704801135]
 script = ExtResource("1_gkxp2")
@@ -23,22 +21,22 @@ render_target_update_mode = 4
 
 [node name="TicketScreen" parent="SubViewport" unique_id=805633814 instance=ExtResource("2_hd5qy")]
 
+[node name="Cursor" type="TextureRect" parent="SubViewport" unique_id=1649989527]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(15, 15)
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = ExtResource("3_hd5qy")
+
 [node name="ScreenMesh" type="MeshInstance3D" parent="." unique_id=1547876686]
 mesh = SubResource("QuadMesh_dqxiu")
 surface_material_override/0 = SubResource("StandardMaterial3D_g2xtj")
-
-[node name="ScreenArea" type="Area3D" parent="." unique_id=123725978]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ScreenArea" unique_id=1070757604]
-shape = SubResource("BoxShape3D_g2xtj")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=255098118]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.042827576)
 light_energy = 0.335
 shadow_enabled = true
-shadow_bias = 0.1
 shadow_blur = 9.665
 spot_range = 3.705
 spot_angle = 54.08
-
-[connection signal="input_event" from="ScreenArea" to="." method="_on_screen_area_input_event"]
