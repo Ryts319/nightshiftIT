@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ull7wrabsmhw"]
+
+[ext_resource type="Script" uid="uid://dm6fjtmab0vgw" path="res://scenes/computer_screen.gd" id="1_gkxp2"]
+[ext_resource type="PackedScene" uid="uid://by22a45fls6j1" path="res://scenes/ticket_screen.tscn" id="2_hd5qy"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rj51g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw5l8"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_rj51g")
+
+[sub_resource type="QuadMesh" id="QuadMesh_dqxiu"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_pw5l8")
+size = Vector2(0.5, 0.28)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_sdo7l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2xtj"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_sdo7l")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
+size = Vector3(0.5, 0.28, 0.01)
+
+[node name="ComputerScreen" type="Node3D" unique_id=704801135]
+script = ExtResource("1_gkxp2")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1640284785]
+size = Vector2i(640, 480)
+render_target_update_mode = 4
+
+[node name="TicketScreen" parent="SubViewport" unique_id=805633814 instance=ExtResource("2_hd5qy")]
+
+[node name="ScreenMesh" type="MeshInstance3D" parent="." unique_id=1547876686]
+mesh = SubResource("QuadMesh_dqxiu")
+surface_material_override/0 = SubResource("StandardMaterial3D_g2xtj")
+
+[node name="ScreenArea" type="Area3D" parent="." unique_id=123725978]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ScreenArea" unique_id=1070757604]
+shape = SubResource("BoxShape3D_g2xtj")
+
+[connection signal="input_event" from="ScreenArea" to="." method="_on_screen_area_input_event"]

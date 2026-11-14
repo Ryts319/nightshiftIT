@@ -16,10 +16,12 @@ extends CharacterBody3D
 
 var is_seated := false
 var standing_camera_transform: Transform3D
+var camera_tween: Tween
 
 func _ready() -> void:
 	add_to_group("player")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	standing_camera_transform = camera.transform
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -28,27 +30,37 @@ func _unhandled_input(event: InputEvent) -> void:
 		var max_pitch := deg_to_rad(max_pitch_degrees)
 		camera.rotation.x = clamp(camera.rotation.x, -max_pitch, max_pitch)
 	elif event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
-	elif event.is_action_pressed("interact"):
+		if is_seated:
+			get_tree().get_first_node_in_group("ticket_screen").close()
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Esc frees the cursor
+	elif event.is_action_pressed("interact") and not is_seated:
 		var target = get_interact_target()
 		if target != null:
 			target.interact()
 	elif event.is_action_pressed("crouch"):
 		is_crouching = not is_crouching
-	elif event is InputEventMouseButton and event.pressed:
+	elif event is InputEventMouseButton and event.pressed and not is_seated:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
 		
 func sit_at(seat: Marker3D) -> void:
+	if is_seated:
+		return
 	is_seated = true
-	standing_camera_transform = camera.transform
-	var tween := create_tween()
-	tween.tween_property(camera, "global_transform", seat.global_transform, 0.6)
-	await tween.finished
+	if camera_tween:
+		camera_tween.kill()
+	camera_tween = create_tween()
+	camera_tween.tween_property(camera, "global_transform", seat.global_transform, 0.6)
+	await camera_tween.finished
 
 func stand_up() -> void:
-	var tween := create_tween()
-	tween.tween_property(camera, "transform", standing_camera_transform, 0.6)
-	await tween.finished
+	if not is_seated:
+		return
+	if camera_tween:
+		camera_tween.kill()
+	camera_tween = create_tween()
+	camera_tween.tween_property(camera, "transform", standing_camera_transform, 0.6)
+	await camera_tween.finished
 	is_seated = false
 		
 func get_interact_target():
@@ -58,7 +70,7 @@ func get_interact_target():
 	return null
 
 func _process(delta: float) -> void:
-	prompt.visible = get_interact_target() != null
+	prompt.visible = get_interact_target() != null and not is_seated
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

@@ -6,15 +6,13 @@ var shown_tickets: Array[Ticket] = []
 
 func _ready() -> void:
 	add_to_group("ticket_screen")
-	visible = false
+	refresh()
 
 func open() -> void:
 	refresh()
-	visible = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func close() -> void:
-	visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	get_tree().get_first_node_in_group("player").stand_up()
 
