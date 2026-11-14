@@ -30,11 +30,12 @@ mouse_filter = 2
 texture = ExtResource("3_hd5qy")
 
 [node name="ScreenMesh" type="MeshInstance3D" parent="." unique_id=1547876686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.01562497)
 mesh = SubResource("QuadMesh_dqxiu")
 surface_material_override/0 = SubResource("StandardMaterial3D_g2xtj")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=255098118]
-transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.042827576)
+transform = Transform3D(0.9999928, 0.0019487187, -0.0032599159, 0.0019745943, -0.99996644, 0.007952513, -0.0032443076, -0.007958893, -0.99996305, 0, 0, 0.042827576)
 light_energy = 0.335
 shadow_enabled = true
 shadow_blur = 9.665

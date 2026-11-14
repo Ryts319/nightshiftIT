@@ -14,10 +14,13 @@ extends CharacterBody3D
 @onready var prompt: Label = $HUD/InteractPrompt
 @onready var crouch: CollisionShape3D = $CollisionShape3D
 @onready var stand_prompt: Label = $HUD/StandPrompt
+@onready var crosshair: Label = $HUD/Crosshair
 
 var is_seated := false
 var standing_camera_transform: Transform3D
 var camera_tween: Tween
+var current_screen: Node3D
+var is_standing_up := false
 
 func _ready() -> void:
 	add_to_group("player")
@@ -25,14 +28,14 @@ func _ready() -> void:
 	standing_camera_transform = camera.transform
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and (not is_seated or is_standing_up):
 		rotate_y(-event.relative.x * mouse_sensitivity) # yaw turns the whole body
 		camera.rotate_x(-event.relative.y * mouse_sensitivity) # pitch only tilts the camera
 		var max_pitch := deg_to_rad(max_pitch_degrees)
 		camera.rotation.x = clamp(camera.rotation.x, -max_pitch, max_pitch)
 	elif event.is_action_pressed("interact"):
 		if is_seated:
-			get_tree().get_first_node_in_group("ticket_screen").close()
+			current_screen.close()
 		else:
 			var target = get_interact_target()
 			if target != null:
@@ -42,10 +45,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event is InputEventMouseButton and event.pressed and not is_seated:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
 		
-func sit_at(seat: Marker3D) -> void:
+func sit_at(seat: Marker3D, screen: Node3D) -> void:
 	if is_seated:
 		return
 	is_seated = true
+	current_screen = screen
 	if camera_tween:
 		camera_tween.kill()
 	camera_tween = create_tween()
@@ -57,9 +61,21 @@ func stand_up() -> void:
 		return
 	if camera_tween:
 		camera_tween.kill()
+	is_standing_up = true
+
+	# hand the view direction back to the body
+	var cam_pos := camera.global_position
+	var facing := camera.global_rotation
+	rotation.y = facing.y                       # body turns to face where you're looking
+	camera.rotation = Vector3(facing.x, 0, 0)   # camera keeps only the up/down tilt
+	camera.global_position = cam_pos            # don't let the camera jump
+
+	# glide only the position back to standing height
 	camera_tween = create_tween()
-	camera_tween.tween_property(camera, "transform", standing_camera_transform, 0.6)
+	camera_tween.tween_property(camera, "position", standing_camera_transform.origin, 0.6)
 	await camera_tween.finished
+
+	is_standing_up = false
 	is_seated = false
 		
 func get_interact_target():
@@ -70,6 +86,7 @@ func get_interact_target():
 
 func _process(delta: float) -> void:
 		prompt.visible = get_interact_target() != null and not is_seated
+		crosshair.visible = not is_seated
 		stand_prompt.visible = is_seated
 
 func _physics_process(delta: float) -> void:

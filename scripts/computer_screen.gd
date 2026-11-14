@@ -5,15 +5,24 @@ extends Node3D
 @onready var viewport: SubViewport = $SubViewport
 @onready var screen_mesh: MeshInstance3D = $ScreenMesh
 @onready var cursor: Control = $SubViewport/Cursor
+@onready var ticket_screen = $SubViewport/TicketScreen
 
 var active := false
 var cursor_pos := Vector2.ZERO
 
 func _ready() -> void:
-	add_to_group("computer_screen")
 	var material: StandardMaterial3D = screen_mesh.get_surface_override_material(0)
 	material.albedo_texture = viewport.get_texture()
 	cursor.visible = false
+	ticket_screen.close_requested.connect(close)
+
+func open() -> void:
+	ticket_screen.refresh()
+	activate()
+
+func close() -> void:
+	deactivate()
+	get_tree().get_first_node_in_group("player").stand_up()
 
 func activate() -> void:
 	active = true
@@ -24,6 +33,10 @@ func activate() -> void:
 func deactivate() -> void:
 	active = false
 	cursor.visible = false
+	var away := InputEventMouseMotion.new()
+	away.position = Vector2(-100, -100)
+	away.global_position = away.position
+	viewport.push_input(away)
 
 func _input(event: InputEvent) -> void:
 	if not active:
