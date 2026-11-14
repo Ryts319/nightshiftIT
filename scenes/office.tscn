@@ -673,9 +673,10 @@ visible = false
 shape = SubResource("BoxShape3D_3e7dm")
 metadata/_edit_lock_ = true
 
-[node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294]
+[node name="Monitor" type="StaticBody3D" parent="." unique_id=1163568294 node_paths=PackedStringArray("seat")]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.3711392e-08, 1, -1, 4.371139e-08, 5.194742e-15, 0.011000001, 1.2, 2.25)
 script = ExtResource("1_n0wcf")
+seat = NodePath("../SeatPoint")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Monitor" unique_id=168281621]
@@ -806,3 +807,6 @@ shadow_normal_bias = 0.0
 shadow_opacity = 0.35
 spot_angle = 25.17895
 metadata/_edit_lock_ = true
+
+[node name="SeatPoint" type="Marker3D" parent="." unique_id=1851151329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050272062, 1.0229084, 3.3837025)

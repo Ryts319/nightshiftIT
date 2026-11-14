@@ -14,7 +14,11 @@ extends CharacterBody3D
 @onready var prompt: Label = $HUD/InteractPrompt
 @onready var crouch: CollisionShape3D = $CollisionShape3D
 
+var is_seated := false
+var standing_camera_transform: Transform3D
+
 func _ready() -> void:
+	add_to_group("player")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -33,7 +37,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		is_crouching = not is_crouching
 	elif event is InputEventMouseButton and event.pressed:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # click to recapture
-	
+		
+func sit_at(seat: Marker3D) -> void:
+	is_seated = true
+	standing_camera_transform = camera.transform
+	var tween := create_tween()
+	tween.tween_property(camera, "global_transform", seat.global_transform, 0.6)
+	await tween.finished
+
+func stand_up() -> void:
+	var tween := create_tween()
+	tween.tween_property(camera, "transform", standing_camera_transform, 0.6)
+	await tween.finished
+	is_seated = false
 		
 func get_interact_target():
 	var target = raycast.get_collider()
@@ -54,6 +70,9 @@ func _physics_process(delta: float) -> void:
 		"move_backward"
 	)
 	
+	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+		input_direction = Vector2.ZERO
+	
 	var direction := transform.basis * Vector3(
 		input_direction.x,
 		0.0,
@@ -64,6 +83,7 @@ func _physics_process(delta: float) -> void:
 	velocity.z = direction.z * current_speed
 	
 	var target_height := crouch_height if is_crouching else stand_height
-	camera.position.y = lerp(camera.position.y, target_height, 10.0 * delta)
+	if not is_seated:
+		camera.position.y = lerp(camera.position.y, target_height, 10.0 * delta)
 	
 	move_and_slide()
