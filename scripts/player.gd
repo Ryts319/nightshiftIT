@@ -70,7 +70,7 @@ func get_interact_target():
 	return null
 
 func _process(delta: float) -> void:
-	prompt.visible = get_interact_target() != null and not is_seated
+		prompt.visible = get_interact_target() != null and not is_seated
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

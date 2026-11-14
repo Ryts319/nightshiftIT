@@ -9,13 +9,15 @@ background_color = Color(0.1584723, 0.15847233, 0.1584723, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.12225228, 0.12225222, 0.1222522, 1)
 ambient_light_energy = 1.46
+glow_enabled = true
+glow_intensity = 1.4
 
 [node name="Main" type="Node3D" unique_id=2111868617]
 
 [node name="Office" parent="." unique_id=359356810 instance=ExtResource("1_0wfyh")]
 
 [node name="Player" parent="." unique_id=744092845 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35348344, 1.2, 3.730547)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137376276]
 environment = SubResource("Environment_dqxiu")

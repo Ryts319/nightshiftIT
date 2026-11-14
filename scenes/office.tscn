@@ -810,4 +810,4 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02833806, 1.0272963, 3.1178596)
 
 [node name="ComputerScreen" parent="." unique_id=704801135 instance=ExtResource("13_wruke")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010748312, 1.0755428, 2.661195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011024877, 1.0773484, 2.6615403)

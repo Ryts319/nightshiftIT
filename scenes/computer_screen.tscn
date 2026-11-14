@@ -3,23 +3,13 @@
 [ext_resource type="Script" uid="uid://dm6fjtmab0vgw" path="res://scenes/computer_screen.gd" id="1_gkxp2"]
 [ext_resource type="PackedScene" uid="uid://by22a45fls6j1" path="res://scenes/ticket_screen.tscn" id="2_hd5qy"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rj51g"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw5l8"]
-resource_local_to_scene = true
-shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_rj51g")
-
 [sub_resource type="QuadMesh" id="QuadMesh_dqxiu"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_pw5l8")
 size = Vector2(0.5, 0.28)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_sdo7l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2xtj"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_sdo7l")
+shading_mode = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2xtj"]
 size = Vector3(0.5, 0.28, 0.01)
@@ -28,7 +18,7 @@ size = Vector3(0.5, 0.28, 0.01)
 script = ExtResource("1_gkxp2")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1640284785]
-size = Vector2i(640, 480)
+size = Vector2i(640, 360)
 render_target_update_mode = 4
 
 [node name="TicketScreen" parent="SubViewport" unique_id=805633814 instance=ExtResource("2_hd5qy")]
@@ -41,5 +31,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_g2xtj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ScreenArea" unique_id=1070757604]
 shape = SubResource("BoxShape3D_g2xtj")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=255098118]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.042827576)
+light_energy = 0.72
+shadow_bias = 0.1
+shadow_blur = 10.0
+spot_range = 3.705
+spot_angle = 49.85
 
 [connection signal="input_event" from="ScreenArea" to="." method="_on_screen_area_input_event"]
