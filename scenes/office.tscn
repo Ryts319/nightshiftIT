@@ -342,6 +342,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="-x office wall" unique_id=1521844515]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, 1.93, 3.4)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_fw3ux")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="-x office wall" unique_id=2124150364]
@@ -351,6 +352,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="-x office wall" unique_id=1224032800]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, 1.93, 0.4)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_g1ciw")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="-x office wall" unique_id=321710627]
@@ -360,6 +362,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="-x office wall" unique_id=567571436]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, 1.93, -2.6)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_u5glt")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="-x office wall" unique_id=1998280487]
@@ -369,6 +372,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-x office wall" unique_id=285765870]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, 1.93, -5.6)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_3u7yi")
 
 [node name="+x office wall" type="StaticBody3D" parent="." unique_id=1785799694]
@@ -382,6 +386,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+x office wall" unique_id=783474161]
 transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5, 0, 3.3999996)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_eet0l")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="+x office wall" unique_id=846689435]
@@ -391,6 +396,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="+x office wall" unique_id=264817350]
 transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5, 0, 0.39999962)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_42gc7")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="+x office wall" unique_id=564880552]
@@ -400,6 +406,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="+x office wall" unique_id=1278093868]
 transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000001, 0, -2.6000004)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_gf52q")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="+x office wall" unique_id=1655173940]
@@ -409,6 +416,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="+x office wall" unique_id=1636066356]
 transform = Transform3D(0, 4.371139e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000002, 0, -5.6000004)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_fsavt")
 
 [node name="-z office wall" type="StaticBody3D" parent="." unique_id=1044550622]
@@ -422,6 +430,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-z office wall" unique_id=1875686260]
 transform = Transform3D(0, 4.3710475e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000005, -2.1000004, 3.5)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_8pip0")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="-z office wall" unique_id=1592877681]
@@ -431,6 +440,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="-z office wall" unique_id=1789952346]
 transform = Transform3D(0, 4.3710534e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000006, -2.1000004, 0.50000006)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_skov3")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="-z office wall" unique_id=401385248]
@@ -440,6 +450,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="-z office wall" unique_id=776223844]
 transform = Transform3D(0, 4.371059e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000007, -2.1000004, -2.5)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_wwlo0")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="-z office wall" unique_id=1932611103]
@@ -449,6 +460,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="-z office wall" unique_id=1519612643]
 transform = Transform3D(0, 4.37082e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000008, -2.1000009, -5.4999995)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_m4cp1")
 
 [node name="+z office wall" type="StaticBody3D" parent="." unique_id=131152736]
@@ -462,6 +474,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="+z office wall" unique_id=459748816]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, 3.5)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_sjdia")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="+z office wall" unique_id=2100908950]
@@ -471,6 +484,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="+z office wall" unique_id=818261248]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, 0.49999994)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_0p3hi")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="+z office wall" unique_id=988529430]
@@ -480,6 +494,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="+z office wall" unique_id=1503973495]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000038, -2.5)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_bkq84")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="+z office wall" unique_id=1246693795]
@@ -489,6 +504,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="+z office wall" unique_id=89501983]
 transform = Transform3D(0, -4.371139e-06, 100, -100, -4.371139e-06, 0, 4.371139e-06, -100, -4.371139e-06, -1.5, -0.10000086, -5.5)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_osgti")
 
 [node name="ceiling" type="StaticBody3D" parent="." unique_id=1489833898]
@@ -502,6 +518,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ceiling" unique_id=51642731]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, -5.499999)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_142py")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="ceiling" unique_id=104175747]
@@ -511,6 +528,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="ceiling" unique_id=1379507245]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000001, -4.7683716e-07, -2.4999995)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_65uj5")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="ceiling" unique_id=1208341780]
@@ -520,6 +538,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="ceiling" unique_id=1954928090]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000006, -4.7683716e-07, 0.5000011)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_cqgbc")
 
 [node name="MeshInstance3D15" type="MeshInstance3D" parent="ceiling" unique_id=683727916]
@@ -529,6 +548,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="ceiling" unique_id=1955346759]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999993, -4.7683716e-07, 3.5000014)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_ak7v7")
 
 [node name="MeshInstance3D19" type="MeshInstance3D" parent="ceiling" unique_id=2141024629]
@@ -538,6 +558,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="ceiling" unique_id=2032749255]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6, -2.3841858e-07, 3.5000002)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_likdn")
 
 [node name="MeshInstance3D20" type="MeshInstance3D" parent="ceiling" unique_id=1329578816]
@@ -547,6 +568,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="ceiling" unique_id=1856092062]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000001, -4.7683716e-07, 3.5000014)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_bv0q3")
 
 [node name="MeshInstance3D16" type="MeshInstance3D" parent="ceiling" unique_id=20748474]
@@ -556,6 +578,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="ceiling" unique_id=236998284]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999999, -4.7683716e-07, 3.5000012)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_pjxyp")
 
 [node name="MeshInstance3D17" type="MeshInstance3D" parent="ceiling" unique_id=2008961426]
@@ -565,6 +588,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="ceiling" unique_id=720577523]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, 0.5000013)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_nygyx")
 
 [node name="MeshInstance3D18" type="MeshInstance3D" parent="ceiling" unique_id=998947519]
@@ -574,6 +598,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="ceiling" unique_id=686494990]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999994, -4.7683716e-07, 0.5000012)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_70iqj")
 
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="ceiling" unique_id=20712270]
@@ -583,6 +608,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="ceiling" unique_id=14563818]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, 0.50000083)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_vilxk")
 
 [node name="MeshInstance3D13" type="MeshInstance3D" parent="ceiling" unique_id=176367862]
@@ -592,6 +618,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D12" type="CollisionShape3D" parent="ceiling" unique_id=786061534]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, -2.4999993)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_12wqr")
 
 [node name="MeshInstance3D14" type="MeshInstance3D" parent="ceiling" unique_id=993780429]
@@ -601,6 +628,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D13" type="CollisionShape3D" parent="ceiling" unique_id=749179577]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.3999995, -4.7683716e-07, -2.4999988)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_y13nk")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="ceiling" unique_id=1333451611]
@@ -610,6 +638,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D14" type="CollisionShape3D" parent="ceiling" unique_id=1769449070]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -3.3999996, -4.7683716e-07, -5.499999)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_wb33o")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="ceiling" unique_id=600911766]
@@ -619,6 +648,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D15" type="CollisionShape3D" parent="ceiling" unique_id=1260344058]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, -0.39999962, -4.7683716e-07, -5.499999)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_qgrek")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="ceiling" unique_id=1882455743]
@@ -628,6 +658,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D16" type="CollisionShape3D" parent="ceiling" unique_id=1326210245]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 2.6000004, -4.7683716e-07, -5.499999)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_rvn1j")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="ceiling" unique_id=1803682772]
@@ -637,6 +668,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling" unique_id=6306382]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, -100, 0, 100, -4.371139e-06, 5.6000004, -4.7683716e-07, -2.499999)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_aqhjm")
 
 [node name="Desk3" parent="." unique_id=1003234115 instance=ExtResource("4_o23kw")]
