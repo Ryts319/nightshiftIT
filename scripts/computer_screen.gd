@@ -6,6 +6,7 @@ extends Node3D
 @onready var screen_mesh: MeshInstance3D = $ScreenMesh
 @onready var cursor: Control = $SubViewport/Cursor
 @onready var ticket_screen = $SubViewport/TicketScreen
+@onready var click_sound: AudioStreamPlayer3D = $ClickSound
 
 var active := false
 var cursor_pos := Vector2.ZERO
@@ -45,6 +46,8 @@ func _input(event: InputEvent) -> void:
 		move_cursor(event.relative * cursor_speed)
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			click_sound.play()
 		var click: InputEventMouseButton = event.duplicate()
 		click.position = cursor_pos
 		click.global_position = cursor_pos

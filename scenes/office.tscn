@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://vdr1hn717djy" path="res://scenes/desk.tscn" id="4_o23kw"]
 [ext_resource type="ArrayMesh" uid="uid://5itcckl8v3ch" path="res://assets/Office_Asset_Pack/meshes/SM_Office_Chair_001.res" id="5_wruke"]
 [ext_resource type="ArrayMesh" uid="uid://dagusqpehbw3l" path="res://assets/Office_Asset_Pack/meshes/SM_Standing_Printer_001.res" id="6_printer"]
+[ext_resource type="AudioStream" uid="uid://boj028h302u5s" path="res://assets/audio/g-lights.wav" id="9_gdafm"]
 [ext_resource type="ArrayMesh" uid="uid://rncnkc1d0st8" path="res://assets/Office_Asset_Pack/meshes/SM_Office_Partition_001.res" id="10_in4ui"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o23kw"]
@@ -432,7 +433,7 @@ mesh = ExtResource("1_fmddn")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="-z office wall" unique_id=1519612643]
-transform = Transform3D(0, 4.37082e-06, 100, 100, -4.371139e-06, 0, 4.371139e-06, 100, -4.371139e-06, -1.5000008, -2.1000009, -5.4999995)
+transform = Transform3D(0, 4.3708196e-06, 100, 100, -4.371139e-06, -4.5474735e-13, 4.371139e-06, 100, -4.371139e-06, -1.5000008, -2.1000009, -5.499999)
 shape = SubResource("ConcavePolygonShape3D_m4cp1")
 
 [node name="+z office wall" type="StaticBody3D" parent="." unique_id=131152736]
@@ -719,12 +720,28 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="ambientlight" type="OmniLight3D" parent="." unique_id=1479130593]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07329917, 1.7889979, 0.093639374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6990108, 3.0100174, 0.093639374)
 light_color = Color(0.9254902, 0.96862745, 1, 1)
 light_energy = 0.315
 shadow_enabled = true
 omni_range = 7.547
-metadata/_edit_lock_ = true
+
+[node name="hum" type="AudioStreamPlayer3D" parent="ambientlight" unique_id=177652917]
+stream = ExtResource("9_gdafm")
+volume_db = -42.668
+autoplay = true
+
+[node name="ambientlight2" type="OmniLight3D" parent="." unique_id=723641633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5871696, 2.943615, 0.18727875)
+light_color = Color(0.9254902, 0.96862745, 1, 1)
+light_energy = 0.315
+shadow_enabled = true
+omni_range = 7.547
+
+[node name="hum" type="AudioStreamPlayer3D" parent="ambientlight2" unique_id=935585429]
+stream = ExtResource("9_gdafm")
+volume_db = -42.668
+autoplay = true
 
 [node name="entrylight" type="SpotLight3D" parent="." unique_id=761255185]
 transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -3.763767, 3.478934, -4.091496)
