@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://i8t6ihmnt802"]
+
+[ext_resource type="PackedScene" uid="uid://b0p8b28hjo3xm" path="res://assets/light/troffer_light_2tl_1_x_4.glb" id="1_68ka7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2swe4"]
+albedo_color = Color(0.9254902, 0.96862745, 1, 1)
+emission_enabled = true
+emission = Color(0.9254902, 0.96862745, 1, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_og2xu"]
+material = SubResource("StandardMaterial3D_2swe4")
+size = Vector2(1.16, 0.26)
+
+[node name="troffer" type="Node3D" unique_id=1955852983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9210917, 0)
+
+[node name="model" parent="." unique_id=483110537 instance=ExtResource("1_68ka7")]
+transform = Transform3D(0.56, 0, 0, 0, 0.56, 0, 0, 0, 0.56, 0, 0, 0)
+
+[node name="panel" type="MeshInstance3D" parent="." unique_id=1752567752]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0.07502222, 0)
+visible = false
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_og2xu")
+
+[node name="light" type="SpotLight3D" parent="." unique_id=1449162086]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.02, 0)
+light_color = Color(0.9254902, 0.96862745, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_blur = 1.5
+spot_range = 4.5
+spot_angle = 70.0
+spot_angle_attenuation = 0.6
